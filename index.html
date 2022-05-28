@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+<script src="calculations.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Calc</title>
+</head>
+<body>
+    <div id="mainCalculatorBox">
+
+        <h2 id="mainHeader">BMI Calculator</h2>
+
+        <div id="calculationsBit">
+
+            <div id="calculatorBrief">The BMI calculation is no indication of fat at all, for instance a body builder will be heavy and have a BMI higher than a coach potato.</div>
+        
+            <div id="inputsPart">
+
+                <div id="heightHeading" class="inputTitle">Height</div>
+                <div id="heightUnits" class="unitsTitle">Centimeters</div>
+
+                <input class="dataEntryBox" id="cmHeight" value="167">
+                <hr>
+
+             <div id="weightHeading" class="inputTitle">Weight</div>
+      
+                
+
+                <div id="weightUnits" class="unitsTitle" >Kilograms</div>
+  
+                <input class="dataEntryBox" id="kgWeight" value="65">
+                <hr>
+
+            </div>
+
+            <div id="outputsPart">
+
+  <div id="resultTitle" class="inputTitle">Your BMI</div>
+    <div id="result">5</div>
+
+            </div>
+        </div>
+        <button style="display:none;" onclick="bmiCalc()">calculate</button>
+    </div>
+    
+</body>
+<script>
+bmiCalc();
+    document.getElementById("kgWeight").addEventListener("keyup",bmiCalc)
+    document.getElementById("cmHeight").addEventListener("keyup",bmiCalc)
+</script>
+</html>
