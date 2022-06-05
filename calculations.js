@@ -4,7 +4,10 @@ let bmiCalc=()=>{
     enteredHeight=document.getElementById("cmHeight").value;
     enteredWeight=document.getElementById("kgWeight").value;
 
-    document.getElementById("result").innerHTML=(enteredWeight/((enteredHeight/100)^2)).toFixed(2);
+    heightInMeters=enteredHeight/100;
+    heightInMetersSquared=heightInMeters*heightInMeters;
+
+    document.getElementById("result").innerHTML=(enteredWeight/heightInMetersSquared).toFixed(2);
 
 
 }
